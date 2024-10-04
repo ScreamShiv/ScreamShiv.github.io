@@ -45,6 +45,10 @@ const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
   // Add event listener to the mute/unmute button
 muteButton.addEventListener('click', () => {
+  playMusic();
+});
+
+function playMusic() {
   // Check if the music is already playing
   if (!isPlaying) {
     // Attempt to play the audio when the user interacts with the button
@@ -67,6 +71,29 @@ muteButton.addEventListener('click', () => {
       muteButton.textContent = '🔇'; // Show 'unmute' icon
     }
   }
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const overlay = document.getElementById('overlay');
+  const openButton = document.getElementById('openButton');
+  const mainContent = document.getElementById('mainContent');
+
+  // Handle the button click to open the envelope and hide the overlay
+  openButton.addEventListener('click', () => {
+    
+    // Hide overlay after animation
+    setTimeout(() => {
+      overlay.style.opacity = 0;
+      overlay.style.pointerEvents = 'none';
+      
+      // Show the main content
+      mainContent.style.opacity = 1;
+    }, 500); // Duration matches the flap's rotation time
+
+    playMusic();
+
+  });
 });
 
 
