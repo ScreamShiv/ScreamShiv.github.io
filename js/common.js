@@ -42,6 +42,7 @@ const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
   const backgroundMusic = document.getElementById('background-music');
   const muteButton = document.getElementById('mute-button');
+  backgroundMusic.volume = 0.3;
 
   // Add event listener to the mute/unmute button
 muteButton.addEventListener('click', () => {
