@@ -274,14 +274,14 @@ background:#ee0b42;
 /*********************top_end****************/
 
 
-.shadow_box_groom{
+.shadow_box_bride{
 box-shadow: 0px 0px 6.1px 3.9px rgb(28 31 86 / 6%);
-animation: glow 2s infinite alternate;
+animation: glowBride 2s infinite alternate;
 padding: 15px!important;
 }
 
 /* Keyframes for glowing animation */
-@keyframes glow {
+@keyframes glowBride {
   0% {
     box-shadow: 0 0 15px rgba(255, 182, 193, 0.5); /* Starting glow */
   }
@@ -290,6 +290,25 @@ padding: 15px!important;
   }
   100% {
     box-shadow: 0 0 15px rgba(255, 182, 193, 0.5); /* Return to starting glow */
+  }
+}
+
+.shadow_box_groom {
+  box-shadow: 0px 0px 6.1px 3.9px rgb(28 31 86 / 6%);
+  animation: glow 2s infinite alternate;
+  padding: 15px !important;
+}
+
+/* Keyframes for glowing animation */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 15px rgba(0, 128, 255, 0.3); /* Starting glow with light blue */
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 128, 255, 0.7); /* Intense glow with full blue */
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(0, 128, 255, 0.3); /* Return to starting glow */
   }
 }
 
